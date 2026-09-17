@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101c31" />
+    <meta name="description" content="Kai Williams is an information technology and cybersecurity student at Tulane University with experience in data research, technology support, and IT audit." />
+    <title>Kai Williams | Information Technology and Cybersecurity</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101c31'/%3E%3Cpath d='M17 16v32m0-16 14-16M17 34l15 14m1-32 7 32 7-19 7 19' fill='none' stroke='%237ee3db' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17223a;
+        --navy: #101c31;
+        --muted: #56647a;
+        --line: #d8e0e8;
+        --paper: #f6f8fb;
+        --white: #ffffff;
+        --aqua: #7ee3db;
+        --blue: #286d81;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        font-synthesis: none;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.58; }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #008f9b; outline-offset: 4px; border-radius: 3px; }
+      .skip { position: absolute; top: -5rem; left: 1rem; z-index: 10; padding: .7rem 1rem; background: #fff; color: #111; }
+      .skip:focus { top: 1rem; }
+      .wrap { width: min(100% - 3rem, 1120px); margin-inline: auto; }
+      .masthead { color: #fff; background: var(--navy); overflow: hidden; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 1.45rem; border-bottom: 1px solid rgba(255,255,255,.18); }
+      .brand { display: inline-flex; gap: .85rem; align-items: center; text-decoration: none; font-size: 1.05rem; font-weight: 700; letter-spacing: .01em; }
+      .brand-mark { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; color: var(--navy); background: var(--aqua); border-radius: .55rem; font-weight: 800; letter-spacing: -.08em; padding-right: .1rem; }
+      nav { display: flex; gap: 1.65rem; flex-wrap: wrap; }
+      nav a { color: #d4e2eb; text-decoration: none; font-size: .93rem; font-weight: 600; }
+      nav a:hover, nav a:focus-visible { color: var(--aqua); }
+      .hero { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(260px,.75fr); gap: 4rem; padding-block: clamp(4.5rem, 10vw, 8rem); align-items: end; position: relative; }
+      .hero::before { content: ""; position: absolute; width: 31rem; height: 31rem; right: -21rem; top: -16rem; border: 1px solid rgba(126,227,219,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(126,227,219,.035), 0 0 0 10rem rgba(126,227,219,.025); pointer-events: none; }
+      .eyebrow { display: flex; align-items: center; gap: .8rem; margin: 0 0 1.5rem; color: var(--aqua); text-transform: uppercase; font-size: .79rem; font-weight: 800; letter-spacing: .18em; }
+      .eyebrow::before { content: ""; width: 2rem; height: 2px; background: currentColor; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 740px; margin-bottom: 1.45rem; font-size: clamp(3.5rem, 8vw, 7.3rem); line-height: .98; letter-spacing: -.07em; font-weight: 750; }
+      .hero-copy { max-width: 640px; color: #d0dce6; font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.65; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.2rem; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 3.1rem; padding: .75rem 1.25rem; border: 1px solid var(--aqua); border-radius: .35rem; background: var(--aqua); color: var(--navy); text-decoration: none; font-weight: 750; }
+      .button:hover { background: #a5f2ec; border-color: #a5f2ec; }
+      .button.secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.45); }
+      .button.secondary:hover { border-color: var(--aqua); color: var(--aqua); }
+      .hero-note { border-left: 2px solid var(--aqua); padding-left: 1.4rem; position: relative; }
+      .hero-note span { display: block; color: var(--aqua); margin-bottom: .85rem; text-transform: uppercase; letter-spacing: .15em; font-size: .74rem; font-weight: 800; }
+      .hero-note p { color: #e2eaf0; font-size: 1.03rem; margin-bottom: 0; }
+      .hero-note strong { color: #fff; }
+      main { padding-bottom: 5rem; }
+      section { scroll-margin-top: 2rem; }
+      .section { padding-block: clamp(4rem, 7vw, 6rem); border-bottom: 1px solid var(--line); }
+      .section-head { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; align-items: start; margin-bottom: 2.5rem; }
+      .section-kicker { margin: .45rem 0 0; color: var(--blue); text-transform: uppercase; font-size: .77rem; letter-spacing: .16em; font-weight: 800; }
+      h2 { margin-bottom: 0; font-size: clamp(2.1rem, 4.2vw, 3.7rem); line-height: 1.1; letter-spacing: -.045em; }
+      .intro { max-width: 760px; color: var(--muted); font-size: 1.13rem; margin: 0; }
+      .experience-list { display: grid; gap: 0; }
+      .role { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; padding-block: 2rem; border-top: 1px solid var(--line); }
+      .role:first-child { border-top: 2px solid var(--ink); }
+      .dates { margin: .18rem 0 0; color: var(--muted); font-size: .92rem; font-weight: 650; }
+      h3 { margin-bottom: .3rem; font-size: 1.38rem; line-height: 1.3; letter-spacing: -.02em; }
+      .organization { margin-bottom: .85rem; color: var(--blue); font-size: .98rem; font-weight: 700; }
+      .role p:last-child { margin-bottom: 0; color: #43516a; }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+      .detail { border-top: 2px solid var(--ink); padding-top: 1.5rem; }
+      .detail h3 { margin-bottom: .7rem; }
+      .detail p { margin-bottom: .7rem; }
+      .detail .muted { color: var(--muted); }
+      .credential-list { list-style: none; margin: 1.3rem 0 0; padding: 0; }
+      .credential-list li { border-top: 1px solid var(--line); padding: .78rem 0; }
+      .credential-list strong { display: block; }
+      .credential-list span { display: block; color: var(--muted); font-size: .93rem; }
+      .skills { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+      .skill-card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--blue); padding: 1.45rem 1.5rem; }
+      .skill-card h3 { font-size: 1.1rem; margin-bottom: .65rem; }
+      .skill-card p { margin: 0; color: var(--muted); }
+      .footer { background: var(--navy); color: #d3e0eb; padding-block: 2.5rem; }
+      .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+      .footer strong { color: #fff; font-size: 1.1rem; }
+      .footer a { color: var(--aqua); text-underline-offset: .2em; }
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 2rem, 1120px); }
+        .topbar { align-items: flex-start; flex-direction: column; gap: 1.1rem; }
+        nav { gap: .7rem 1.2rem; }
+        .hero, .section-head, .role, .two-col { grid-template-columns: 1fr; gap: 1.25rem; }
+        .hero { padding-block: 4.5rem; }
+        .hero-note { margin-top: 1rem; }
+        .section-head { margin-bottom: 2rem; }
+        .role { padding-block: 1.7rem; }
+        .dates { margin: 0; }
+        .two-col { gap: 2.8rem; }
+        .skills { grid-template-columns: 1fr; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="masthead">
+      <div class="wrap">
+        <div class="topbar">
+          <a class="brand" href="#top" aria-label="Kai Williams, back to top"><span class="brand-mark" aria-hidden="true">KW</span><span>Kai Williams</span></a>
+          <nav aria-label="Main navigation">
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+          </nav>
+        </div>
+        <div class="hero" id="top">
+          <div>
+            <p class="eyebrow">Technology · Cybersecurity · Data</p>
+            <h1>Kai Williams</h1>
+            <p class="hero-copy">I’m an information technology and cybersecurity student at Tulane University. My work connects technical support, data research, and IT audit with clear documentation and practical solutions.</p>
+            <div class="hero-actions">
+              <a class="button" href="#experience">Explore my experience</a>
+              <a class="button secondary" href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">View GitHub</a>
+            </div>
+          </div>
+          <aside class="hero-note" aria-label="Current focus">
+            <span>Current focus</span>
+            <p><strong>IT audit at TD Bank</strong>, data research at Tulane CAIDS, and hands-on technology support across the Tulane community.</p>
+          </aside>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-head">
+          <p class="section-kicker">01 / Experience</p>
+          <div>
+            <h2 id="experience-title">Work across systems, data, and people.</h2>
+          </div>
+        </div>
+        <div class="experience-list">
+          <article class="role">
+            <p class="dates">June 2026 – Present</p>
+            <div>
+              <h3>Summer Intern · Audit</h3>
+              <p class="organization">TD Bank, N.A.</p>
+              <p>Support integrated IT audits by reviewing processes, control design, technology risks, and governance practices. Built a Power BI platform that brings audit assessment data into a shared workflow and helps teams filter results across business lines.</p>
+            </div>
+          </article>
+          <article class="role">
+            <p class="dates">August 2025 – Present</p>
+            <div>
+              <h3>Data Research Intern</h3>
+              <p class="organization">Tulane Connolly Alexander Institute for Data Science</p>
+              <p>Lead collaborative projects with nine Tulane departments, institutes, and nonprofit organizations. Use Scrum to coordinate work, improve information access, and help partners sustain projects through training and documentation.</p>
+            </div>
+          </article>
+          <article class="role">
+            <p class="dates">August 2025 – Present</p>
+            <div>
+              <h3>Residential Assistant</h3>
+              <p class="organization">Tulane Housing and Residence Life · Warren House</p>
+              <p>Support a community of more than 200 students, respond to urgent situations, connect residents with resources, and maintain professional incident documentation.</p>
+            </div>
+          </article>
+          <article class="role">
+            <p class="dates">January 2025 – Present</p>
+            <div>
+              <h3>Information Technology Intern</h3>
+              <p class="organization">Tulane Newcomb Institute</p>
+              <p>Maintain equipment and inventory across 20 offices, three classrooms, and a gallery. Troubleshoot presentation systems and provide timely support to staff and faculty.</p>
+            </div>
+          </article>
+          <article class="role">
+            <p class="dates">August 2024 – August 2025</p>
+            <div>
+              <h3>Data Ambassador</h3>
+              <p class="organization">Tulane Connolly Alexander Institute for Data Science</p>
+              <p>Promoted data literacy through collaborative projects and outreach, helping students from different academic backgrounds engage with data and its interpretation.</p>
+            </div>
+          </article>
+          <article class="role">
+            <p class="dates">June 2023 – June 2025</p>
+            <div>
+              <h3>Online Grocery Pickup Associate</h3>
+              <p class="organization">Walmart Inc.</p>
+              <p>Used handheld systems to manage online orders, monitor workflow alerts, and meet fulfillment goals while serving customers in a fast-paced environment.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section-head">
+          <p class="section-kicker">02 / Education</p>
+          <h2 id="education-title">Learning with purpose.</h2>
+        </div>
+        <div class="two-col">
+          <div class="detail">
+            <h3>Tulane University</h3>
+            <p>School of Professional Advancement<br />Bachelor of Science in Information Technology and Cybersecurity</p>
+            <p class="muted">Expected May 2027 · GPA 3.6</p>
+            <p>Posse Foundation full-tuition leadership scholar.</p>
+          </div>
+          <div class="detail">
+            <h3>Credentials and involvement</h3>
+            <ul class="credential-list">
+              <li><strong>CompTIA A+</strong><span>Core 1 and Core 2 complete</span></li>
+              <li><strong>CompTIA Security+</strong><span>In progress</span></li>
+              <li><strong>Cybersecurity Hackathon</strong><span>Participant, October 2024</span></li>
+              <li><strong>Campus communities</strong><span>Tulane Cybersecurity Team, Tulane Data Collective, and CAIDS</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-head">
+          <p class="section-kicker">03 / Skills</p>
+          <h2 id="skills-title">Tools for practical problem solving.</h2>
+        </div>
+        <div class="skills">
+          <div class="skill-card"><h3>Data and process</h3><p>Power BI, Microsoft Excel, Qualtrics, data literacy, Scrum, and documentation.</p></div>
+          <div class="skill-card"><h3>Technology support</h3><p>Hardware troubleshooting, presentation technology, inventory, and operational support.</p></div>
+          <div class="skill-card"><h3>Security foundations</h3><p>Networking, incident response, IT controls, risk assessment, and technology operations.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <strong>Kai Williams</strong>
+        <a href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+      </div>
+    </footer>
+  </body>
+</html>
