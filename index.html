@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#101c31" />
     <meta name="description" content="Kai Williams is an information technology and cybersecurity student at Tulane University with experience in data research, technology support, and IT audit." />
+    <meta name="author" content="Kai Williams" />
     <title>Kai Williams | Information Technology and Cybersecurity</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101c31'/%3E%3Cpath d='M17 16v32m0-16 14-16M17 34l15 14m1-32 7 32 7-19 7 19' fill='none' stroke='%237ee3db' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <style>
@@ -59,6 +60,16 @@
       .section-kicker { margin: .45rem 0 0; color: var(--blue); text-transform: uppercase; font-size: .77rem; letter-spacing: .16em; font-weight: 800; }
       h2 { margin-bottom: 0; font-size: clamp(2.1rem, 4.2vw, 3.7rem); line-height: 1.1; letter-spacing: -.045em; }
       .intro { max-width: 760px; color: var(--muted); font-size: 1.13rem; margin: 0; }
+      .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .project-card { display: flex; min-height: 100%; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); padding: 1.6rem; }
+      .project-number { margin-bottom: 1.35rem; color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+      .project-card h3 { margin-bottom: .75rem; font-size: 1.45rem; }
+      .project-card > p:not(.project-number) { color: var(--muted); }
+      .project-meta { display: grid; gap: .85rem; margin: 1rem 0 1.3rem; }
+      .project-meta div { border-top: 1px solid var(--line); padding-top: .8rem; }
+      .project-meta dt { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+      .project-meta dd { margin: .25rem 0 0; color: #43516a; }
+      .project-link { margin-top: auto; font-weight: 750; color: var(--blue); text-underline-offset: .22em; }
       .experience-list { display: grid; gap: 0; }
       .role { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; padding-block: 2rem; border-top: 1px solid var(--line); }
       .role:first-child { border-top: 2px solid var(--ink); }
@@ -79,6 +90,13 @@
       .skill-card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--blue); padding: 1.45rem 1.5rem; }
       .skill-card h3 { font-size: 1.1rem; margin-bottom: .65rem; }
       .skill-card p { margin: 0; color: var(--muted); }
+      .contact-panel { display: grid; grid-template-columns: 1.35fr .65fr; gap: 3rem; align-items: center; padding: clamp(2rem, 5vw, 3.5rem); color: #fff; background: var(--navy); }
+      .contact-panel h2 { margin-bottom: 1rem; }
+      .contact-panel p { max-width: 650px; margin-bottom: 0; color: #d0dce6; font-size: 1.08rem; }
+      .contact-actions { display: flex; flex-direction: column; gap: .75rem; }
+      .contact-actions .button { width: 100%; }
+      .contact-actions .button.secondary { color: #fff; }
+      .availability { margin-top: 1rem; color: var(--aqua); font-size: .86rem; font-weight: 700; text-align: center; }
       .footer { background: var(--navy); color: #d3e0eb; padding-block: 2.5rem; }
       .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
       .footer strong { color: #fff; font-size: 1.1rem; }
@@ -94,7 +112,8 @@
         .role { padding-block: 1.7rem; }
         .dates { margin: 0; }
         .two-col { gap: 2.8rem; }
-        .skills { grid-template-columns: 1fr; }
+        .project-grid, .skills { grid-template-columns: 1fr; }
+        .contact-panel { grid-template-columns: 1fr; gap: 2rem; }
         .footer-inner { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -107,9 +126,11 @@
         <div class="topbar">
           <a class="brand" href="#top" aria-label="Kai Williams, back to top"><span class="brand-mark" aria-hidden="true">KW</span><span>Kai Williams</span></a>
           <nav aria-label="Main navigation">
+            <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
           </nav>
         </div>
         <div class="hero" id="top">
@@ -118,8 +139,9 @@
             <h1>Kai Williams</h1>
             <p class="hero-copy">I’m an information technology and cybersecurity student at Tulane University. My work connects technical support, data research, and IT audit with clear documentation and practical solutions.</p>
             <div class="hero-actions">
-              <a class="button" href="#experience">Explore my experience</a>
+              <a class="button" href="#projects">View featured work</a>
               <a class="button secondary" href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">View GitHub</a>
+              <a class="button secondary" href="Kai-Williams-Resume.docx" download>Download résumé</a>
             </div>
           </div>
           <aside class="hero-note" aria-label="Current focus">
@@ -130,15 +152,59 @@
       </div>
     </header>
     <main id="main" class="wrap">
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <p class="section-kicker">01 / Featured work</p>
+          <div>
+            <h2 id="projects-title">Selected projects with practical outcomes.</h2>
+            <p class="intro">A closer look at how I organize information, support technical environments, and turn complex work into usable systems.</p>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-number">Case study 01</p>
+            <h3>Audit Assessment Platform</h3>
+            <p>A shared Power BI workflow designed to make audit assessment information easier to explore across business lines.</p>
+            <dl class="project-meta">
+              <div><dt>My contribution</dt><dd>Structured assessment data, designed filters, and organized the reporting experience.</dd></div>
+              <div><dt>Tools</dt><dd>Power BI, Excel, IT controls, audit documentation</dd></div>
+              <div><dt>Outcome</dt><dd>A centralized, filterable view that supports a more consistent review process.</dd></div>
+            </dl>
+            <a class="project-link" href="#td-bank-role">Read the experience details →</a>
+          </article>
+          <article class="project-card">
+            <p class="project-number">Case study 02</p>
+            <h3>Cross-Campus Data Partnerships</h3>
+            <p>Collaborative data projects delivered with Tulane departments, institutes, and nonprofit organizations.</p>
+            <dl class="project-meta">
+              <div><dt>My contribution</dt><dd>Coordinate project work, clarify partner needs, and prepare training and documentation.</dd></div>
+              <div><dt>Tools</dt><dd>Scrum, Qualtrics, Excel, data literacy</dd></div>
+              <div><dt>Outcome</dt><dd>Work that partners can understand, maintain, and continue after project handoff.</dd></div>
+            </dl>
+            <a class="project-link" href="#caids-role">Read the experience details →</a>
+          </article>
+          <article class="project-card">
+            <p class="project-number">Case study 03</p>
+            <h3>Campus Technology Operations</h3>
+            <p>Hands-on support for equipment, inventory, and presentation systems across a multi-room academic environment.</p>
+            <dl class="project-meta">
+              <div><dt>My contribution</dt><dd>Troubleshoot technology, maintain equipment records, and support staff and faculty.</dd></div>
+              <div><dt>Tools</dt><dd>Hardware support, AV systems, inventory, documentation</dd></div>
+              <div><dt>Scope</dt><dd>20 offices, three classrooms, and a gallery.</dd></div>
+            </dl>
+            <a class="project-link" href="#newcomb-role">Read the experience details →</a>
+          </article>
+        </div>
+      </section>
       <section class="section" id="experience" aria-labelledby="experience-title">
         <div class="section-head">
-          <p class="section-kicker">01 / Experience</p>
+          <p class="section-kicker">02 / Experience</p>
           <div>
             <h2 id="experience-title">Work across systems, data, and people.</h2>
           </div>
         </div>
         <div class="experience-list">
-          <article class="role">
+          <article class="role" id="td-bank-role">
             <p class="dates">June 2026 – Present</p>
             <div>
               <h3>Summer Intern · Audit</h3>
@@ -146,7 +212,7 @@
               <p>Support integrated IT audits by reviewing processes, control design, technology risks, and governance practices. Built a Power BI platform that brings audit assessment data into a shared workflow and helps teams filter results across business lines.</p>
             </div>
           </article>
-          <article class="role">
+          <article class="role" id="caids-role">
             <p class="dates">August 2025 – Present</p>
             <div>
               <h3>Data Research Intern</h3>
@@ -162,7 +228,7 @@
               <p>Support a community of more than 200 students, respond to urgent situations, connect residents with resources, and maintain professional incident documentation.</p>
             </div>
           </article>
-          <article class="role">
+          <article class="role" id="newcomb-role">
             <p class="dates">January 2025 – Present</p>
             <div>
               <h3>Information Technology Intern</h3>
@@ -190,7 +256,7 @@
       </section>
       <section class="section" id="education" aria-labelledby="education-title">
         <div class="section-head">
-          <p class="section-kicker">02 / Education</p>
+          <p class="section-kicker">03 / Education</p>
           <h2 id="education-title">Learning with purpose.</h2>
         </div>
         <div class="two-col">
@@ -213,21 +279,38 @@
       </section>
       <section class="section" id="skills" aria-labelledby="skills-title">
         <div class="section-head">
-          <p class="section-kicker">03 / Skills</p>
+          <p class="section-kicker">04 / Skills</p>
           <h2 id="skills-title">Tools for practical problem solving.</h2>
         </div>
         <div class="skills">
-          <div class="skill-card"><h3>Data and process</h3><p>Power BI, Microsoft Excel, Qualtrics, data literacy, Scrum, and documentation.</p></div>
-          <div class="skill-card"><h3>Technology support</h3><p>Hardware troubleshooting, presentation technology, inventory, and operational support.</p></div>
-          <div class="skill-card"><h3>Security foundations</h3><p>Networking, incident response, IT controls, risk assessment, and technology operations.</p></div>
+          <div class="skill-card"><h3>Data analysis</h3><p>Power BI, Microsoft Excel, Qualtrics, reporting, data literacy, and information organization.</p></div>
+          <div class="skill-card"><h3>Cybersecurity</h3><p>Networking, incident response, IT controls, risk assessment, governance, and technology operations.</p></div>
+          <div class="skill-card"><h3>IT support</h3><p>Hardware troubleshooting, presentation technology, equipment inventory, and operational support.</p></div>
+          <div class="skill-card"><h3>Project delivery</h3><p>Scrum, partner communication, training, documentation, and sustainable handoff.</p></div>
+          <div class="skill-card"><h3>Leadership</h3><p>Community support, incident documentation, resource coordination, and cross-functional collaboration.</p></div>
+          <div class="skill-card"><h3>Professional strengths</h3><p>Clear writing, active listening, structured problem solving, adaptability, and service.</p></div>
+        </div>
+      </section>
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">05 / Contact</p>
+            <h2 id="contact-title">Let’s connect.</h2>
+            <p>I’m interested in opportunities where technology, cybersecurity, data, and thoughtful service come together. Explore my work on GitHub or download my résumé for the full background.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button" href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">Connect on GitHub</a>
+            <a class="button secondary" href="Kai-Williams-Resume.docx" download>Download résumé</a>
+            <span class="availability">Open to professional conversations</span>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="wrap footer-inner">
         <strong>Kai Williams</strong>
-        <a href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+        <div><a href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">GitHub profile</a> · <a href="Kai-Williams-Resume.docx" download>Résumé</a></div>
       </div>
     </footer>
   </body>
-  </html>
+</html>
