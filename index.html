@@ -65,11 +65,17 @@
       .project-number { margin-bottom: 1.35rem; color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
       .project-card h3 { margin-bottom: .75rem; font-size: 1.45rem; }
       .project-card > p:not(.project-number) { color: var(--muted); }
+      .project-labels { display: flex; flex-wrap: wrap; gap: .45rem; margin: .1rem 0 1rem; }
+      .project-label { display: inline-flex; align-items: center; width: fit-content; border: 1px solid #cdd7e7; border-radius: 999px; background: #f5f8fc; padding: .34rem .65rem; color: #43516a; font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+      .project-label.private { border-color: #e0d6be; background: #fbf8ef; color: #6e5a2b; }
+      .project-label.complete { border-color: #b8d8c3; background: #f0f8f2; color: #245c37; }
       .project-meta { display: grid; gap: .85rem; margin: 1rem 0 1.3rem; }
       .project-meta div { border-top: 1px solid var(--line); padding-top: .8rem; }
       .project-meta dt { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
       .project-meta dd { margin: .25rem 0 0; color: #43516a; }
       .project-link { margin-top: auto; font-weight: 750; color: var(--blue); text-underline-offset: .22em; }
+      .project-actions { display: grid; gap: .55rem; margin-top: auto; }
+      .project-file-note { color: var(--muted); font-size: .85rem; }
       .experience-list { display: grid; gap: 0; }
       .role { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; padding-block: 2rem; border-top: 1px solid var(--line); }
       .role:first-child { border-top: 2px solid var(--ink); }
@@ -157,31 +163,47 @@
           <p class="section-kicker">01 / Featured work</p>
           <div>
             <h2 id="projects-title">Selected projects with practical outcomes.</h2>
-            <p class="intro">A closer look at how I organize information, support technical environments, and turn complex work into usable systems.</p>
+            <p class="intro">Public-safe summaries of how I organize information, support technical environments, and contribute to usable data systems.</p>
           </div>
         </div>
         <div class="project-grid">
           <article class="project-card">
             <p class="project-number">Case study 01</p>
-            <h3>Audit Assessment Platform</h3>
-            <p>A shared Power BI workflow designed to make audit assessment information easier to explore across business lines.</p>
+            <h3>Internal Audit Analytics Dashboard</h3>
+            <div class="project-labels" aria-label="Project notes">
+              <span class="project-label private">Limited public summary</span>
+              <span class="project-label complete">Completed</span>
+            </div>
+            <p>An internal Power BI project supporting audit assessment analysis and a more organized reporting workflow. The page keeps business context and implementation details at a high level.</p>
             <dl class="project-meta">
-              <div><dt>My contribution</dt><dd>Structured assessment data, designed filters, and organized the reporting experience.</dd></div>
+              <div><dt>My contribution</dt><dd>Developed the reporting structure and user experience for internal analysis.</dd></div>
               <div><dt>Tools</dt><dd>Power BI, Excel, IT controls, audit documentation</dd></div>
-              <div><dt>Outcome</dt><dd>A centralized, filterable view that supports a more consistent review process.</dd></div>
+              <div><dt>Public scope</dt><dd>High-level overview with the completed Power BI file available for portfolio review.</dd></div>
             </dl>
-            <a class="project-link" href="#td-bank-role">Read the experience details →</a>
+            <div class="project-actions">
+              <a class="project-link" href="Internal-Audit-Dashboard.pbix" download>Download the dashboard file →</a>
+              <span class="project-file-note">Downloads a Power BI file for viewing in Power BI Desktop.</span>
+              <a class="project-link" href="#td-bank-role">Read the experience details →</a>
+            </div>
           </article>
           <article class="project-card">
             <p class="project-number">Case study 02</p>
-            <h3>Cross-Campus Data Partnerships</h3>
-            <p>Collaborative data projects delivered with Tulane departments, institutes, and nonprofit organizations.</p>
+            <h3>Center for Sport Dashboard</h3>
+            <div class="project-labels" aria-label="Project notes">
+              <span class="project-label">Collaborative project</span>
+              <span class="project-label">In progress</span>
+            </div>
+            <p>A Power BI dashboard developed as part of a broader team effort for the Center for Sport. This project is included to show my experience contributing to collaborative analytics work, not as a claim of sole authorship.</p>
             <dl class="project-meta">
-              <div><dt>My contribution</dt><dd>Coordinate project work, clarify partner needs, and prepare training and documentation.</dd></div>
-              <div><dt>Tools</dt><dd>Scrum, Qualtrics, Excel, data literacy</dd></div>
-              <div><dt>Outcome</dt><dd>Work that partners can understand, maintain, and continue after project handoff.</dd></div>
+              <div><dt>My contribution</dt><dd>Contributed to the team’s dashboard development and project work.</dd></div>
+              <div><dt>Tools</dt><dd>Power BI, collaborative data analysis, reporting</dd></div>
+              <div><dt>Attribution</dt><dd>Created with contributions from other team members and project partners.</dd></div>
             </dl>
-            <a class="project-link" href="#caids-role">Read the experience details →</a>
+            <div class="project-actions">
+              <a class="project-link" href="Center-for-Sport-Dashboard.pbix" download>View the dashboard file →</a>
+              <span class="project-file-note">Downloads a Power BI file for viewing in Power BI Desktop.</span>
+              <a class="project-link" href="#caids-role">Read the experience details →</a>
+            </div>
           </article>
           <article class="project-card">
             <p class="project-number">Case study 03</p>
