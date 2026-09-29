@@ -37,7 +37,7 @@
       nav { display: flex; gap: 1.65rem; flex-wrap: wrap; }
       nav a { color: #d4e2eb; text-decoration: none; font-size: .93rem; font-weight: 600; }
       nav a:hover, nav a:focus-visible { color: var(--aqua); }
-      .hero { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(260px,.75fr); gap: 4rem; padding-block: clamp(4.5rem, 10vw, 8rem); align-items: end; position: relative; }
+      .hero { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(280px,.8fr); gap: 4rem; padding-block: clamp(4.5rem, 10vw, 8rem); align-items: center; position: relative; }
       .hero::before { content: ""; position: absolute; width: 31rem; height: 31rem; right: -21rem; top: -16rem; border: 1px solid rgba(126,227,219,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(126,227,219,.035), 0 0 0 10rem rgba(126,227,219,.025); pointer-events: none; }
       .eyebrow { display: flex; align-items: center; gap: .8rem; margin: 0 0 1.5rem; color: var(--aqua); text-transform: uppercase; font-size: .79rem; font-weight: 800; letter-spacing: .18em; }
       .eyebrow::before { content: ""; width: 2rem; height: 2px; background: currentColor; }
@@ -49,6 +49,9 @@
       .button:hover { background: #a5f2ec; border-color: #a5f2ec; }
       .button.secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.45); }
       .button.secondary:hover { border-color: var(--aqua); color: var(--aqua); }
+      .hero-profile { display: grid; gap: 1.4rem; position: relative; }
+      .headshot-frame { margin: 0; border: 1px solid rgba(255,255,255,.24); border-radius: .45rem; overflow: hidden; background: #0b1527; box-shadow: 0 1.5rem 3.5rem rgba(0,0,0,.28); }
+      .headshot { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
       .hero-note { border-left: 2px solid var(--aqua); padding-left: 1.4rem; position: relative; }
       .hero-note span { display: block; color: var(--aqua); margin-bottom: .85rem; text-transform: uppercase; letter-spacing: .15em; font-size: .74rem; font-weight: 800; }
       .hero-note p { color: #e2eaf0; font-size: 1.03rem; margin-bottom: 0; }
@@ -113,7 +116,7 @@
         nav { gap: .7rem 1.2rem; }
         .hero, .section-head, .role, .two-col { grid-template-columns: 1fr; gap: 1.25rem; }
         .hero { padding-block: 4.5rem; }
-        .hero-note { margin-top: 1rem; }
+        .hero-profile { width: min(100%, 28rem); margin-top: 1rem; }
         .section-head { margin-bottom: 2rem; }
         .role { padding-block: 1.7rem; }
         .dates { margin: 0; }
@@ -150,10 +153,15 @@
               <a class="button secondary" href="Kai-Williams-Resume.docx" download>Download résumé</a>
             </div>
           </div>
-          <aside class="hero-note" aria-label="Current focus">
-            <span>Current focus</span>
-            <p><strong>IT audit at TD Bank</strong>, data research at Tulane CAIDS, and hands-on technology support across the Tulane community.</p>
-          </aside>
+          <div class="hero-profile">
+            <figure class="headshot-frame">
+              <img class="headshot" src="kai-williams-headshot.png" alt="Kai Williams wearing a navy suit at a Posse Foundation event" width="1122" height="1402" />
+            </figure>
+            <aside class="hero-note" aria-label="Current focus">
+              <span>Current focus</span>
+              <p><strong>IT audit at TD Bank</strong>, data research at Tulane CAIDS, and hands-on technology support across the Tulane community.</p>
+            </aside>
+          </div>
         </div>
       </div>
     </header>
