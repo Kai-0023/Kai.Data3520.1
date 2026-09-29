@@ -32,10 +32,10 @@
       .wrap { width: min(100% - 3rem, 1120px); margin-inline: auto; }
       .masthead { color: #fff; background: var(--navy); overflow: hidden; }
       .topbar { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 1.45rem; border-bottom: 1px solid rgba(255,255,255,.18); }
-      .brand { display: inline-flex; gap: .85rem; align-items: center; text-decoration: none; font-size: 1.05rem; font-weight: 700; letter-spacing: .01em; }
+      .brand { display: inline-flex; min-height: 2.75rem; gap: .85rem; align-items: center; text-decoration: none; font-size: 1.05rem; font-weight: 700; letter-spacing: .01em; }
       .brand-mark { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; color: var(--navy); background: var(--aqua); border-radius: .55rem; font-weight: 800; letter-spacing: -.08em; padding-right: .1rem; }
       nav { display: flex; gap: 1.65rem; flex-wrap: wrap; }
-      nav a { color: #d4e2eb; text-decoration: none; font-size: .93rem; font-weight: 600; }
+      nav a { display: inline-flex; min-width: 2.75rem; min-height: 2.75rem; padding-inline: .35rem; align-items: center; justify-content: center; color: #d4e2eb; text-decoration: none; font-size: .93rem; font-weight: 600; }
       nav a:hover, nav a:focus-visible { color: var(--aqua); }
       .hero { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(280px,.8fr); gap: 4rem; padding-block: clamp(4.5rem, 10vw, 8rem); align-items: center; position: relative; }
       .hero::before { content: ""; position: absolute; width: 31rem; height: 31rem; right: -21rem; top: -16rem; border: 1px solid rgba(126,227,219,.2); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(126,227,219,.035), 0 0 0 10rem rgba(126,227,219,.025); pointer-events: none; }
@@ -76,7 +76,7 @@
       .project-meta div { border-top: 1px solid var(--line); padding-top: .8rem; }
       .project-meta dt { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
       .project-meta dd { margin: .25rem 0 0; color: #43516a; }
-      .project-link { margin-top: auto; font-weight: 750; color: var(--blue); text-underline-offset: .22em; }
+      .project-link { display: inline-flex; min-height: 2.75rem; align-items: center; margin-top: auto; font-weight: 750; color: var(--blue); text-underline-offset: .22em; }
       .project-actions { display: grid; gap: .55rem; margin-top: auto; }
       .project-file-note { color: var(--muted); font-size: .85rem; }
       .experience-list { display: grid; gap: 0; }
@@ -109,13 +109,15 @@
       .footer { background: var(--navy); color: #d3e0eb; padding-block: 2.5rem; }
       .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
       .footer strong { color: #fff; font-size: 1.1rem; }
-      .footer a { color: var(--aqua); text-underline-offset: .2em; }
+      .footer a { display: inline-flex; min-height: 2.75rem; align-items: center; color: var(--aqua); text-underline-offset: .2em; }
       @media (max-width: 760px) {
         .wrap { width: min(100% - 2rem, 1120px); }
         .topbar { align-items: flex-start; flex-direction: column; gap: 1.1rem; }
-        nav { gap: .7rem 1.2rem; }
+        nav { gap: .1rem 1.2rem; }
         .hero, .section-head, .role, .two-col { grid-template-columns: 1fr; gap: 1.25rem; }
         .hero { padding-block: 4.5rem; }
+        .hero-actions { display: grid; grid-template-columns: 1fr; }
+        .hero-actions .button { width: 100%; }
         .hero-profile { width: min(100%, 28rem); margin-top: 1rem; }
         .section-head { margin-bottom: 2rem; }
         .role { padding-block: 1.7rem; }
@@ -124,6 +126,10 @@
         .project-grid, .skills { grid-template-columns: 1fr; }
         .contact-panel { grid-template-columns: 1fr; gap: 2rem; }
         .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (max-width: 420px) {
+        h1 { font-size: clamp(2.75rem, 15vw, 3.5rem); }
+        .project-card, .skill-card { padding-inline: 1.25rem; }
       }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
