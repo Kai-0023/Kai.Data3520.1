@@ -81,6 +81,8 @@
       .project-label { display: inline-flex; align-items: center; width: fit-content; border: 1px solid #cdd7e7; border-radius: 999px; background: #f5f8fc; padding: .34rem .65rem; color: #43516a; font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
       .project-label.private { border-color: #e0d6be; background: #fbf8ef; color: #6e5a2b; }
       .project-label.complete { border-color: #b8d8c3; background: #f0f8f2; color: #245c37; }
+      .project-preview { margin: .15rem 0 1.25rem; overflow: hidden; border: 1px solid var(--line); border-radius: .3rem; background: #eef3f7; }
+      .project-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
       .project-meta { display: grid; gap: .85rem; margin: 1rem 0 1.3rem; }
       .project-meta div { border-top: 1px solid var(--line); padding-top: .8rem; }
       .project-meta dt { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
@@ -114,6 +116,9 @@
       .contact-actions { display: flex; flex-direction: column; gap: .75rem; }
       .contact-actions .button { width: 100%; }
       .contact-actions .button.secondary { color: #fff; }
+      .contact-email-list { display: grid; gap: .4rem; margin-top: .2rem; }
+      .contact-email-list a { color: #d0dce6; font-size: .9rem; font-weight: 650; text-align: center; text-underline-offset: .2em; }
+      .contact-email-list a:hover, .contact-email-list a:focus-visible { color: var(--aqua); }
       .availability { margin-top: 1rem; color: var(--aqua); font-size: .86rem; font-weight: 700; text-align: center; }
       .footer { background: var(--navy); color: #d3e0eb; padding-block: 2.5rem; }
       .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
@@ -168,7 +173,7 @@
             <div class="hero-actions">
               <a class="button" href="#projects">View featured work</a>
               <a class="button secondary" href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">View GitHub</a>
-              <a class="button secondary" href="Kai-Williams-Resume.docx" download>Download résumé</a>
+              <a class="button secondary" href="Kai-Williams-Resume.pdf" download>Download résumé (PDF)</a>
             </div>
           </div>
           <div class="hero-profile">
@@ -210,6 +215,9 @@
               <span class="project-label private">Limited public summary</span>
               <span class="project-label complete">Completed</span>
             </div>
+            <figure class="project-preview">
+              <img src="internal-audit-dashboard.png" alt="Screenshot of a process inventory dashboard showing audit controls, risks, and coverage" />
+            </figure>
             <p>An internal Power BI project supporting audit assessment analysis and a more organized reporting workflow. The page keeps business context and implementation details at a high level.</p>
             <dl class="project-meta">
               <div><dt>My contribution</dt><dd>Developed the reporting structure and user experience for internal analysis.</dd></div>
@@ -229,6 +237,9 @@
               <span class="project-label">Collaborative project</span>
               <span class="project-label">In progress</span>
             </div>
+            <figure class="project-preview">
+              <img src="center-for-sport-dashboard.png" alt="Screenshot of a sports careers dashboard with filters and charts for jobs by league and city" />
+            </figure>
             <p>A Power BI dashboard developed as part of a broader team effort for the Center for Sport. This project is included to show my experience contributing to collaborative analytics work, not as a claim of sole authorship.</p>
             <dl class="project-meta">
               <div><dt>My contribution</dt><dd>Contributed to the team’s dashboard development and project work.</dd></div>
@@ -354,11 +365,16 @@
           <div>
             <p class="eyebrow">05 / Contact</p>
             <h2 id="contact-title">Let’s connect.</h2>
-            <p>I’m interested in opportunities where technology, cybersecurity, data, and thoughtful service come together. Explore my work on GitHub or download my résumé for the full background.</p>
+            <p>I’m interested in opportunities where technology, cybersecurity, data, and thoughtful service come together. Connect with me on LinkedIn, explore my work on GitHub, or reach out by email.</p>
           </div>
           <div class="contact-actions">
+            <a class="button" href="https://www.linkedin.com/in/kai-williams-b255aa276/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             <a class="button" href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">Connect on GitHub</a>
-            <a class="button secondary" href="Kai-Williams-Resume.docx" download>Download résumé</a>
+            <a class="button secondary" href="Kai-Williams-Resume.pdf" download>Download résumé (PDF)</a>
+            <div class="contact-email-list" aria-label="Email Kai Williams">
+              <a href="mailto:kwilliams28@tulane.edu">kwilliams28@tulane.edu</a>
+              <a href="mailto:kaiwilliams0000@gmail.com">kaiwilliams0000@gmail.com</a>
+            </div>
             <span class="availability">Open to professional conversations</span>
           </div>
         </div>
@@ -367,7 +383,7 @@
     <footer class="footer">
       <div class="wrap footer-inner">
         <strong>Kai Williams</strong>
-        <div><a href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">GitHub profile</a> · <a href="Kai-Williams-Resume.docx" download>Résumé</a></div>
+        <div><a href="https://github.com/Kai-0023" target="_blank" rel="noopener noreferrer">GitHub profile</a> · <a href="Kai-Williams-Resume.pdf" download>Résumé PDF</a></div>
       </div>
     </footer>
   </body>
