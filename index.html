@@ -7,6 +7,9 @@
     <meta name="description" content="Kai Williams is an information technology and cybersecurity student at Tulane University with experience in data research, technology support, and IT audit." />
     <meta name="author" content="Kai Williams" />
     <title>Kai Williams | Information Technology and Cybersecurity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101c31'/%3E%3Cpath d='M17 16v32m0-16 14-16M17 34l15 14m1-32 7 32 7-19 7 19' fill='none' stroke='%237ee3db' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <style>
       :root {
@@ -19,7 +22,7 @@
         --white: #ffffff;
         --aqua: #7ee3db;
         --blue: #286d81;
-        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        font-family: "Manrope", "Segoe UI", Arial, sans-serif;
         font-synthesis: none;
       }
       * { box-sizing: border-box; }
@@ -42,8 +45,9 @@
       .eyebrow { display: flex; align-items: center; gap: .8rem; margin: 0 0 1.5rem; color: var(--aqua); text-transform: uppercase; font-size: .79rem; font-weight: 800; letter-spacing: .18em; }
       .eyebrow::before { content: ""; width: 2rem; height: 2px; background: currentColor; }
       h1, h2, h3, p { margin-top: 0; }
+      p { max-width: 70ch; }
       h1 { max-width: 740px; margin-bottom: 1.45rem; font-size: clamp(3.5rem, 8vw, 7.3rem); line-height: .98; letter-spacing: -.07em; font-weight: 750; }
-      .hero-copy { max-width: 640px; color: #d0dce6; font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.65; }
+      .hero-copy { max-width: 70ch; color: #d0dce6; font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.65; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.2rem; }
       .button { display: inline-flex; align-items: center; justify-content: center; min-height: 3.1rem; padding: .75rem 1.25rem; border: 1px solid var(--aqua); border-radius: .35rem; background: var(--aqua); color: var(--navy); text-decoration: none; font-weight: 750; }
       .button:hover { background: #a5f2ec; border-color: #a5f2ec; }
@@ -62,7 +66,7 @@
       .section-head { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; align-items: start; margin-bottom: 2.5rem; }
       .section-kicker { margin: .45rem 0 0; color: var(--blue); text-transform: uppercase; font-size: .77rem; letter-spacing: .16em; font-weight: 800; }
       h2 { margin-bottom: 0; font-size: clamp(2.1rem, 4.2vw, 3.7rem); line-height: 1.1; letter-spacing: -.045em; }
-      .intro { max-width: 760px; color: var(--muted); font-size: 1.13rem; margin: 0; }
+      .intro { max-width: 70ch; color: var(--muted); font-size: 1.13rem; margin: 0; }
       .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
       .project-card { display: flex; min-height: 100%; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); padding: 1.6rem; }
       .project-number { margin-bottom: 1.35rem; color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
@@ -101,7 +105,7 @@
       .skill-card p { margin: 0; color: var(--muted); }
       .contact-panel { display: grid; grid-template-columns: 1.35fr .65fr; gap: 3rem; align-items: center; padding: clamp(2rem, 5vw, 3.5rem); color: #fff; background: var(--navy); }
       .contact-panel h2 { margin-bottom: 1rem; }
-      .contact-panel p { max-width: 650px; margin-bottom: 0; color: #d0dce6; font-size: 1.08rem; }
+      .contact-panel p { max-width: 70ch; margin-bottom: 0; color: #d0dce6; font-size: 1.08rem; }
       .contact-actions { display: flex; flex-direction: column; gap: .75rem; }
       .contact-actions .button { width: 100%; }
       .contact-actions .button.secondary { color: #fff; }
@@ -161,7 +165,7 @@
           </div>
           <div class="hero-profile">
             <figure class="headshot-frame">
-              <img class="headshot" src="kai-williams-headshot.png" alt="Kai Williams wearing a navy suit at a Posse Foundation event" width="1122" height="1402" />
+              <img class="headshot" src="kai-williams-headshot.jpg" alt="Kai Williams wearing a navy suit at a Posse Foundation event" width="640" height="800" />
             </figure>
             <aside class="hero-note" aria-label="Current focus">
               <span>Current focus</span>
