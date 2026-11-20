@@ -12,3 +12,8 @@ The website is built as a self-contained [index.html](index.html) file and inclu
 - [Center for Sport Dashboard](Center-for-Sport-Dashboard.pbix) — collaborative project; this work includes contributions from other team members and project partners.
 
 The `.pbix` files require Power BI Desktop to open.
+
+## Featured technical projects
+
+- [Edge Scanner 2](https://github.com/Kai-0023/edge-scanner-2) — a FastAPI-based NBA and NFL sports research tool with sport-specific analysis, local data storage, and automated tests.
+- [Plot Twist](https://plottwistapp.site/) — a team entertainment-discovery app for books, movies, television, and podcasts. [View the source repository](https://github.com/jshirmo/plot_twist).

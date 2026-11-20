@@ -72,7 +72,7 @@
       .section-kicker { margin: .45rem 0 0; color: var(--blue); text-transform: uppercase; font-size: .77rem; letter-spacing: .16em; font-weight: 800; }
       h2 { margin-bottom: 0; font-size: clamp(2.1rem, 4.2vw, 3.7rem); line-height: 1.1; letter-spacing: -.045em; }
       .intro { max-width: 70ch; color: var(--muted); font-size: 1.13rem; margin: 0; }
-      .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
       .project-card { display: flex; min-height: 100%; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); padding: 1.6rem; }
       .project-number { margin-bottom: 1.35rem; color: var(--blue); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
       .project-card h3 { margin-bottom: .75rem; font-size: 1.45rem; }
@@ -254,14 +254,38 @@
           </article>
           <article class="project-card">
             <p class="project-number">Case study 03</p>
-            <h3>Campus Technology Operations</h3>
-            <p>Hands-on support for equipment, inventory, and presentation systems across a multi-room academic environment.</p>
+            <h3>Edge Scanner 2</h3>
+            <div class="project-labels" aria-label="Project notes">
+              <span class="project-label">Sports research</span>
+              <span class="project-label complete">Personal project</span>
+            </div>
+            <p>A sports research tool that organizes NBA and NFL data through a clear API structure and transparent analysis workflows.</p>
             <dl class="project-meta">
-              <div><dt>My contribution</dt><dd>Troubleshoot technology, maintain equipment records, and support staff and faculty.</dd></div>
-              <div><dt>Tools</dt><dd>Hardware support, AV systems, inventory, documentation</dd></div>
-              <div><dt>Scope</dt><dd>20 offices, three classrooms, and a gallery.</dd></div>
+              <div><dt>My contribution</dt><dd>Developed server-side routes, sport-specific analysis tools, and a local data workflow.</dd></div>
+              <div><dt>Tools</dt><dd>Python, FastAPI, SQLite, automated tests, environment variables</dd></div>
+              <div><dt>Design choice</dt><dd>Separates data collection, analysis logic, and API routes so each part can grow independently.</dd></div>
             </dl>
-            <a class="project-link" href="#newcomb-role">Read the experience details →</a>
+            <div class="project-actions">
+              <a class="project-link" href="https://github.com/Kai-0023/edge-scanner-2" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <p class="project-number">Case study 04</p>
+            <h3>Plot Twist</h3>
+            <div class="project-labels" aria-label="Project notes">
+              <span class="project-label">Team project</span>
+              <span class="project-label">Entertainment discovery</span>
+            </div>
+            <p>A cross-media discovery app that helps people find books, movies, television, and podcasts through shared story moods and preferences.</p>
+            <dl class="project-meta">
+              <div><dt>My contribution</dt><dd>Contributed to the personalized discovery experience, including mood controls and recommendation behavior.</dd></div>
+              <div><dt>Tools</dt><dd>React, TypeScript, Node.js, Firebase, server-side Gemini</dd></div>
+              <div><dt>Key features</dt><dd>Swipe feedback, preference profiles, media scanning, watchlists, and group recommendations.</dd></div>
+            </dl>
+            <div class="project-actions">
+              <a class="project-link" href="https://plottwistapp.site/" target="_blank" rel="noopener noreferrer">Open the live app ↗</a>
+              <a class="project-link" href="https://github.com/jshirmo/plot_twist" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
+            </div>
           </article>
         </div>
       </section>
