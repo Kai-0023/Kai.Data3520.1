@@ -16,4 +16,5 @@ The `.pbix` files require Power BI Desktop to open.
 ## Featured technical projects
 
 - [Edge Scanner 2](https://github.com/Kai-0023/edge-scanner-2) — a FastAPI-based NBA and NFL sports research tool with sport-specific analysis, local data storage, and automated tests.
-- [Plot Twist](https://plottwistapp.site/) — a team entertainment-discovery app for books, movies, television, and podcasts. [View the source repository](https://github.com/jshirmo/plot_twist).
+- [Edge Scanner 2 AI Studio app](https://edge-scanner-2.ai.studio) — live AI Studio demonstration.
+- [Plot Twist](https://plottwistapp.site/) — a team entertainment-discovery app for books, movies, television, and podcasts. [View the source repository](https://github.com/jshirmo/plot_twist) or the [project presentation](https://claude.ai/artifact/QLegTz8rJuqBGJC9MY3LSz#slide-aeb2da65215a).

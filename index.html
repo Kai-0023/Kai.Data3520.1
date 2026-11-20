@@ -90,6 +90,13 @@
       .project-link { display: inline-flex; min-height: 2.75rem; align-items: center; margin-top: auto; font-weight: 750; color: var(--blue); text-underline-offset: .22em; }
       .project-actions { display: grid; gap: .55rem; margin-top: auto; }
       .project-file-note { color: var(--muted); font-size: .85rem; }
+      .project-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; margin: 1rem 0 1.3rem; }
+      .project-flow span { display: grid; min-height: 4.9rem; place-items: center; border: 1px solid #cdd7e7; border-radius: .3rem; padding: .65rem; color: #43516a; background: #f5f8fc; text-align: center; font-size: .76rem; font-weight: 750; line-height: 1.25; }
+      .portfolio-note { margin-top: 1.5rem; border-left: 4px solid var(--aqua); padding: 1.25rem 1.35rem; background: #eef7f7; }
+      .portfolio-note h3 { margin-bottom: .55rem; font-size: 1.1rem; }
+      .portfolio-note p { margin-bottom: .75rem; color: #43516a; }
+      .portfolio-note p:last-child { margin-bottom: 0; }
+
       .experience-list { display: grid; gap: 0; }
       .role { display: grid; grid-template-columns: minmax(180px,.52fr) 1.48fr; gap: 3rem; padding-block: 2rem; border-top: 1px solid var(--line); }
       .role:first-child { border-top: 2px solid var(--ink); }
@@ -141,6 +148,8 @@
         .dates { margin: 0; }
         .two-col { gap: 2.8rem; }
         .project-grid, .skills { grid-template-columns: 1fr; }
+        .project-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
         .contact-panel { grid-template-columns: 1fr; gap: 2rem; }
         .footer-inner { align-items: flex-start; flex-direction: column; }
       }
@@ -258,14 +267,16 @@
             <div class="project-labels" aria-label="Project notes">
               <span class="project-label">Sports research</span>
               <span class="project-label complete">Personal project</span>
+              <span class="project-label">AI-assisted</span>
             </div>
             <p>A sports research tool that organizes NBA and NFL data through a clear API structure and transparent analysis workflows.</p>
             <dl class="project-meta">
               <div><dt>My contribution</dt><dd>Developed server-side routes, sport-specific analysis tools, and a local data workflow.</dd></div>
-              <div><dt>Tools</dt><dd>Python, FastAPI, SQLite, automated tests, environment variables</dd></div>
+              <div><dt>Tools and services</dt><dd>Python, FastAPI, SQLite, Google AI Studio, GitHub, automated tests, and environment variables</dd></div>
               <div><dt>Design choice</dt><dd>Separates data collection, analysis logic, and API routes so each part can grow independently.</dd></div>
             </dl>
             <div class="project-actions">
+              <a class="project-link" href="https://edge-scanner-2.ai.studio" target="_blank" rel="noopener noreferrer">Open the AI Studio app ↗</a>
               <a class="project-link" href="https://github.com/Kai-0023/edge-scanner-2" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
             </div>
           </article>
@@ -275,19 +286,36 @@
             <div class="project-labels" aria-label="Project notes">
               <span class="project-label">Team project</span>
               <span class="project-label">Entertainment discovery</span>
+              <span class="project-label">AI-assisted</span>
             </div>
             <p>A cross-media discovery app that helps people find books, movies, television, and podcasts through shared story moods and preferences.</p>
+            <figure class="project-preview">
+              <img src="plot-twist-delivery-workflow.png" alt="Plot Twist team workflow showing individual branches, pull requests, automatic review and testing, development integration, and production deployment. The project presentation reports 43 pull requests, 110 or more commits, 13 days, and 6 teammates." />
+            </figure>
             <dl class="project-meta">
               <div><dt>My contribution</dt><dd>Contributed to the personalized discovery experience, including mood controls and recommendation behavior.</dd></div>
-              <div><dt>Tools</dt><dd>React, TypeScript, Node.js, Firebase, server-side Gemini</dd></div>
+              <div><dt>Tools and services</dt><dd>React, TypeScript, Node.js, Firebase, Google Gemini, verified catalog sources, and GitHub</dd></div>
               <div><dt>Key features</dt><dd>Swipe feedback, preference profiles, media scanning, watchlists, and group recommendations.</dd></div>
+              <div><dt>Team delivery</dt><dd>Six teammates used separate GitHub branches and pull requests; automated checks ran before work merged and deployed.</dd></div>
             </dl>
+            <div class="project-flow" aria-label="Plot Twist recommendation flow">
+              <span>Taste profile and mood</span>
+              <span>Catalog sources and app server</span>
+              <span>Gemini match explanation</span>
+              <span>Discover, swipe, scan, or save</span>
+            </div>
             <div class="project-actions">
               <a class="project-link" href="https://plottwistapp.site/" target="_blank" rel="noopener noreferrer">Open the live app ↗</a>
+              <a class="project-link" href="https://claude.ai/artifact/QLegTz8rJuqBGJC9MY3LSz#slide-aeb2da65215a" target="_blank" rel="noopener noreferrer">View project presentation ↗</a>
               <a class="project-link" href="https://github.com/jshirmo/plot_twist" target="_blank" rel="noopener noreferrer">Explore on GitHub ↗</a>
             </div>
           </article>
         </div>
+        <aside class="portfolio-note" aria-label="AI and project availability note">
+          <h3>How AI supported the work</h3>
+          <p>AI was used as a development collaborator for ideation, documentation, code assistance, test planning, and iteration. I and my teammates made the product decisions, reviewed the results, tested features, and owned the final code and GitHub commits.</p>
+          <p><strong>Live-demo availability:</strong> Some project demos rely on third-party hosting, APIs, AI models, or paid subscriptions. A live link or feature may be paused if a provider, API key, plan, or service changes.</p>
+        </aside>
       </section>
       <section class="section" id="experience" aria-labelledby="experience-title">
         <div class="section-head">
